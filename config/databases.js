@@ -1,6 +1,6 @@
 module.exports = {
     blog: {
-        usarname : 'postgres',
+        username : 'postgres',
         port : '5432',
         password : 'postgres',
         database : 'blog',

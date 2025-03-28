@@ -1,4 +1,4 @@
-const db = require('../../../../config/databeses');
+const db = require('../../../../config/databases');
 
 module.exports = { /// quais vão ser os ambientes que o sequelizer usaria esse informação vai ser referenciado no .venv
     development : {

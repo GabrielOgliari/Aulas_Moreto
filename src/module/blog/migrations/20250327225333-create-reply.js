@@ -2,30 +2,15 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    const table = {tableName: 'post', schenma: 'public'};
-    await queryInterface.createTable(table, {
+    await queryInterface.createTable('Replies', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      id_post: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references : {
-          model: {
-            schenma: "public",
-            tableName: "post",
-          },
-        },
-        key: "id",
-      },
-      post: {
+      reply: {
         type: Sequelize.TEXT
-      },
-      title: {
-        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
@@ -38,7 +23,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    const table = {tableName: 'post', schenma: 'public'};
-    await queryInterface.dropTable(table);
+    await queryInterface.dropTable('Replies');
   }
 };
